@@ -67,7 +67,10 @@ class Node:
         return NotImplemented
 
     def __rsub__(self, other):
-        return self.__sub__(other)
+        if isinstance(other, numbers.Number) and self.type == float:
+            from .nodes import SubtractFloats
+            return SubtractFloats(other, self)
+        return NotImplemented
 
     def __mul__(self, other):
         if isinstance(other, Node):
@@ -110,7 +113,10 @@ class Node:
         return NotImplemented
 
     def __rtruediv__(self, other):
-        return self.__truediv__(other)
+        if isinstance(other, numbers.Number) and self.type == float:
+            from .nodes import DivideFloats
+            return DivideFloats(other, self)
+        return NotImplemented
 
     def __floordiv__(self, other):
         result = self.__truediv__(other)
