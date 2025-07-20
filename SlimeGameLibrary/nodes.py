@@ -350,16 +350,15 @@ def Debug(inputData, string: str = None, changePosition=True):
 
     debugCounter += 1
 
-    num = 1
     if isinstance(inputData, tuple):
+        inputNode = parseLiteral(inputData[0])
         num = inputData[1]
-        inputNode = inputData[0]
     else:
-        inputNode = inputData
+        inputNode = parseLiteral(inputData)
+        num = inputNode.outputIndex
 
-    inputNode = parseLiteral(inputNode)
-
-    portName = list(inputNode.outputPorts.keys())[num - 1]
+    ports = [port["id"] for port in inputNode.data["serializablePorts"] if port["polarity"] != 0]
+    portName = ports[num - 1]
     ConnectPorts((portName, "Any1"), inputNode, baseNode)
     data["serializableConnections"][-1]["line"]["startWidth"] = 0  # invisible line
 

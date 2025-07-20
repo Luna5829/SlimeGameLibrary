@@ -1069,16 +1069,6 @@ ports = {
     ],
     "Vector3Split": [
         {
-            "position": Position3(19.8, -84.2),
-            "id": "Float1",
-            "polarity": 1,
-            "maxConnections": 0,
-            "iconColorDefault": Color(0.87, 0.81, 0),
-            "iconColorHover": Color(0.89, 0.85, 0.37),
-            "iconColorSelected": Color(0.87, 0.81, 0),
-            "controlPointPosition": Position3(50.6, 0),
-        },
-        {
             "position": Position3(-266.1, -84.2),
             "id": "Vector31",
             "polarity": 0,
@@ -1089,8 +1079,8 @@ ports = {
             "controlPointPosition": Position3(-55.8, 0),
         },
         {
-            "position": Position3(19.8, -175.4),
-            "id": "Float3",
+            "position": Position3(19.8, -84.2),
+            "id": "Float1",
             "polarity": 1,
             "maxConnections": 0,
             "iconColorDefault": Color(0.87, 0.81, 0),
@@ -1101,6 +1091,16 @@ ports = {
         {
             "position": Position3(19.8, -130.18),
             "id": "Float2",
+            "polarity": 1,
+            "maxConnections": 0,
+            "iconColorDefault": Color(0.87, 0.81, 0),
+            "iconColorHover": Color(0.89, 0.85, 0.37),
+            "iconColorSelected": Color(0.87, 0.81, 0),
+            "controlPointPosition": Position3(50.6, 0),
+        },
+        {
+            "position": Position3(19.8, -175.4),
+            "id": "Float3",
             "polarity": 1,
             "maxConnections": 0,
             "iconColorDefault": Color(0.87, 0.81, 0),
